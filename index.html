@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faso Digital</title>
+    
+    <!-- Importation des polices Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,600;1,700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #226f11; /* Vert forêt de votre maquette */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+        }
+
+        /* Le titre "Faso Digital" personnalisé en JAUNIE OR */
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            color: #f59e0b; /* Un magnifique jaune or / ambre */
+            font-size: 3rem;
+            font-style: italic;
+            font-weight: 700;
+            padding: 30px 0 0 40px;
+            margin: 0;
+        }
+
+        /* Nouvelle section centrale pour vos services */
+        .main-content {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .slogan {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        /* Grille pour afficher vos 3 compétences */
+        .services-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            background-color: rgba(255, 255, 255, 0.1); /* Fond blanc transparent très moderne */
+            padding: 20px;
+            border-radius: 8px;
+            width: 200px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px); /* Effet flouté tendance */
+        }
+
+        .service-card h3 {
+            font-family: 'Poppins', sans-serif;
+            margin-top: 0;
+            color: #f59e0b; /* Rappel du jaune or pour les sous-titres */
+            font-size: 1.2rem;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            line-height: 1.4;
+            color: #f3f4f6;
+        }
+
+        /* Conteneur du bouton en bas */
+        .cta-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 60px;
+        }
+
+        /* Le bouton rouge */
+        .btn-whatsapp {
+            background-color: #e31b1b; /* Rouge vif */
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-style: italic;
+            text-decoration: none;
+            padding: 16px 60px;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.05);
+            background-color: #b91c1c;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Votre titre mis à jour en jaune or -->
+    <h1 class="logo-text">Faso Digital</h1>
+
+    <!-- Nouvelle section de présentation de vos compétences -->
+    <div class="main-content">
+        <p class="slogan">Des solutions digitales sur-mesure pour votre business</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Marketing</h3>
+                <p>Création de campagnes publicitaires ciblées pour attirer des clients burkinabè.</p>
+            </div>
+            <div class="service-card">
+                <h3>Graphisme</h3>
+                <p>Conception d'identités visuelles uniques et de maquettes Figma modernes.</p>
+            </div>
+            <div class="service-card">
+                <h3>Programmation</h3>
+                <p>Développement de sites internet rapides, professionnels et sécurisés.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Votre bouton centré en bas connecté à votre numéro Orange -->
+    <div class="cta-container">
+        <a href="https://wa.me" class="btn-whatsapp">Discuter</a>
+    </div>
+
+</body>
+</html>
