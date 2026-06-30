@@ -10,9 +10,12 @@
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,600;1,700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
+    <!-- Importation de Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+
     <style>
         body {
-            background-color: #226f11; /* Vert forêt de votre maquette */
+            background-color: #226f11; /* Vert forêt exact */
             margin: 0;
             padding: 0;
             display: flex;
@@ -24,10 +27,10 @@
             color: #ffffff;
         }
 
-        /* Le titre "Faso Digital" personnalisé en JAUNIE OR */
+        /* Titre principal en Jaune Or */
         .logo-text {
             font-family: 'Poppins', sans-serif;
-            color: #f59e0b; /* Un magnifique jaune or / ambre */
+            color: #f59e0b; 
             font-size: 3rem;
             font-style: italic;
             font-weight: 700;
@@ -35,11 +38,10 @@
             margin: 0;
         }
 
-        /* Nouvelle section centrale pour vos services */
         .main-content {
             text-align: center;
-            padding: 40px 20px;
-            max-width: 800px;
+            padding: 20px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
@@ -47,43 +49,74 @@
             font-family: 'Poppins', sans-serif;
             font-size: 1.8rem;
             font-weight: 600;
-            margin-bottom: 30px;
-            color: #ffffff;
+            margin-bottom: 40px;
         }
 
-        /* Grille pour afficher vos 3 compétences */
+        /* Alignement des cartes */
         .services-grid {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
             flex-wrap: wrap;
             margin-bottom: 40px;
         }
 
+        /* Style de BASE pour toutes les cartes */
         .service-card {
-            background-color: rgba(255, 255, 255, 0.1); /* Fond blanc transparent très moderne */
-            padding: 20px;
-            border-radius: 8px;
-            width: 200px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            backdrop-filter: blur(5px); /* Effet flouté tendance */
+            padding: 30px 20px;
+            border-radius: 12px;
+            width: 240px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
         }
 
+        /* Animation au survol des cartes */
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+        }
+
+        /* DIFFÉRENCIATION DES CARTES PAR LA COULEUR ET LES BORDURES */
+        
+        /* 1. Carte Marketing : Style Bleu/Cyan professionnel */
+        .card-marketing {
+            background-color: rgba(30, 41, 59, 0.7); /* Fond ardoise foncé transparent */
+            border-top: 5px solid #38bdf8; /* Ligne bleue en haut */
+        }
+        .card-marketing i { color: #38bdf8; } /* Icône bleue */
+
+        /* 2. Carte Graphisme : Style Violet/Rose créatif */
+        .card-graphisme {
+            background-color: rgba(88, 28, 135, 0.5); /* Fond violet transparent */
+            border-top: 5px solid #f472b6; /* Ligne rose en haut */
+        }
+        .card-graphisme i { color: #f472b6; } /* Icône rose */
+
+        /* 3. Carte Programmation : Style Sombre/Jaune Or technique */
+        .card-programmation {
+            background-color: rgba(15, 23, 42, 0.8); /* Fond très sombre */
+            border-top: 5px solid #f59e0b; /* Ligne jaune or en haut */
+        }
+        .card-programmation i { color: #f59e0b; } /* Icône jaune or */
+
+
+        /* Typographie interne des cartes */
         .service-card h3 {
             font-family: 'Poppins', sans-serif;
-            margin-top: 0;
-            color: #f59e0b; /* Rappel du jaune or pour les sous-titres */
-            font-size: 1.2rem;
+            margin: 15px 0 10px 0;
+            font-size: 1.3rem;
+            color: #ffffff;
         }
 
         .service-card p {
             font-size: 0.9rem;
-            margin-bottom: 0;
-            line-height: 1.4;
-            color: #f3f4f6;
+            margin: 0;
+            line-height: 1.5;
+            color: #e5e7eb;
         }
 
-        /* Conteneur du bouton en bas */
+        /* Zone Bouton Bas */
         .cta-container {
             display: flex;
             justify-content: center;
@@ -91,9 +124,8 @@
             padding-bottom: 60px;
         }
 
-        /* Le bouton rouge */
         .btn-whatsapp {
-            background-color: #e31b1b; /* Rouge vif */
+            background-color: #e31b1b; 
             color: #ffffff;
             font-family: 'Poppins', sans-serif;
             font-size: 1.2rem;
@@ -103,41 +135,47 @@
             padding: 16px 60px;
             border-radius: 4px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s ease, background-color 0.2s ease;
+            transition: transform 0.2s ease;
         }
 
         .btn-whatsapp:hover {
             transform: scale(1.05);
-            background-color: #b91c1c;
         }
     </style>
 </head>
 <body>
 
-    <!-- Votre titre mis à jour en jaune or -->
     <h1 class="logo-text">Faso Digital</h1>
 
-    <!-- Nouvelle section de présentation de vos compétences -->
     <div class="main-content">
         <p class="slogan">Des solutions digitales sur-mesure pour votre business</p>
         
         <div class="services-grid">
-            <div class="service-card">
+            
+            <!-- CARTE 1 : MARKETING (Avec classe spécifique) -->
+            <div class="service-card card-marketing">
+                <i class="fas fa-bullhorn fa-2x"></i>
                 <h3>Marketing</h3>
-                <p>Création de campagnes publicitaires ciblées pour attirer des clients burkinabè.</p>
+                <p>Création de campagnes publicitaires ciblées sur Meta Ads pour attirer des clients locaux.</p>
             </div>
-            <div class="service-card">
+
+            <!-- CARTE 2 : GRAPHISME (Avec classe spécifique) -->
+            <div class="service-card card-graphisme">
+                <i class="fas fa-palette fa-2x"></i>
                 <h3>Graphisme</h3>
-                <p>Conception d'identités visuelles uniques et de maquettes Figma modernes.</p>
+                <p>Conception d'identités visuelles uniques et de maquettes Figma modernes adaptées à votre cible.</p>
             </div>
-            <div class="service-card">
+
+            <!-- CARTE 3 : PROGRAMMATION (Avec classe spécifique) -->
+            <div class="service-card card-programmation">
+                <i class="fas fa-code fa-2x"></i>
                 <h3>Programmation</h3>
-                <p>Développement de sites internet rapides, professionnels et sécurisés.</p>
+                <p>Développement de sites internet rapides, professionnels et optimisés pour les smartphones.</p>
             </div>
+
         </div>
     </div>
 
-    <!-- Votre bouton centré en bas connecté à votre numéro Orange -->
     <div class="cta-container">
         <a href="https://wa.me/22665082582" class="btn-whatsapp">Discuter</a>
     </div>
